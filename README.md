@@ -1,2 +1,0 @@
-# WebhookDev
-Created with CodeSandbox
