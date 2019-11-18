@@ -1,17 +1,17 @@
 // will contain Headers, Query or body json in formatted form.
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { duotoneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { duotoneSpace } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-function JSONView(props) {
+function JSONView({ showLineNumber, codeString }) {
   return (
     <SyntaxHighlighter
-      showLineNumbers
+      showLineNumbers={showLineNumber}
       wrapLines
-      language="json"
-      style={duotoneLight}
+      language="bash"
+      style={duotoneSpace}
     >
-      {JSON.stringify(props.codeString || {}, " ", 2)}
+      {JSON.stringify(codeString || {}, " ", 2)}
     </SyntaxHighlighter>
   );
 }
